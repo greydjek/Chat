@@ -44,9 +44,11 @@
     </VBox>
         <HBox fx:id="mainBox" layoutX="-4.0" layoutY="26.0" prefHeight="463.0" prefWidth="925.0" visible="false">
         <VBox prefHeight="503.0" prefWidth="673.0">
-          <TextArea fx:id="privateMessage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="664.0" text="Private Message  " HBox.hgrow="ALWAYS" />
+          <TextArea fx:id="privateMessage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0"
+                    prefWidth="664.0" text="Private Message  " HBox.hgrow="ALWAYS" />
 
-      <TextArea fx:id="MainControls" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="284.0" prefWidth="664.0" text="Public message  ">
+      <TextArea fx:id="MainControls" editable="false" maxHeight="-Infinity"
+                maxWidth="-Infinity" prefHeight="284.0" prefWidth="664.0" text="Public message  ">
 <!--<VBox.margin>-->
 <!--   <Insets left="20" right="5" />-->
 <!--</VBox.margin>-->
@@ -81,9 +83,12 @@
         <Button fx:id="cancel" onAction="#toMainMenu" prefHeight="100" prefWidth="100" text="CANCEL" />
     </VBox>
     <VBox fx:id="HistoryVBox" visible="false" layoutX="20.0" maxHeight="227.0" maxWidth="586.0" prefHeight="176.0" prefWidth="586.0">
-        <TextField fx:id = "HistoryTextField" maxWidth="Infinity" maxHeight="Infinity"></TextField>
-    <Button fx:id="cancelHistory" onAction="#cancel"  prefHeight="100" prefWidth="100" text="CANCEL" />
+
+        <TextArea fx:id="HistoryTextAreaField" editable="false" maxWidth="Infinity" maxHeight="Infinity">
+    </TextArea>
+    <Button fx:id="cancelHistory" onAction="#cancel"  prefHeight="50" prefWidth="100" text="CANCEL" />
     </VBox>
-
-
 </AnchorPane>
+
+
+<!--</AnchorPane>-->

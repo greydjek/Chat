@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,7 +22,8 @@ import java.util.ResourceBundle;
 public class MainChatController implements Initializable, MessageProcessor {
     public TextArea privateMessage;
     public VBox HistoryVBox;
-    public TextField HistoryTextField;
+    public Button cancelHistory;
+    public TextArea HistoryTextAreaField;
     ButtonType buttonError = new ButtonType("ALL TEXT FIELD MAST NOT NULL");
     public HBox mainBox;
     public TextField newLogin;
@@ -200,6 +202,7 @@ public void setButtonError(ActionEvent actionEvent){
     String newSec=  newSecret.getText();
     String m="/new"+RESEX + log+RESEX+newpass+RESEX+newnick+RESEX+newSec;
     netWorkService.sendMessage(m);
+    newLogin.clear();newPassword.clear();newNick.clear();newSecret.clear();
     }else
     {
         netWorkService.sendMessage("/error"+RESEX+ "TEXT IS NULL");
@@ -212,13 +215,14 @@ String canc = "/cancel"+ RESEX;
 joinParsingMessage(canc);
 }
 
-    public void clientHistory(ActionEvent actionEvent) {
+    public void clientHistory(ActionEvent actionEvent) throws FileNotFoundException {
     this.greatHistory = new greatHistory();
         MainChatPannel.setVisible(false);
         MainControls.setVisible(false);
         mainBox.setVisible(false);
 HistoryVBox.setVisible(true);
-HistoryTextField.appendText( greatHistory.reedHistoryUser());
+HistoryTextAreaField.appendText(greatHistory.reedHistoryUser() + "\n");
+
 }
 
     public void cancel(ActionEvent actionEvent) {

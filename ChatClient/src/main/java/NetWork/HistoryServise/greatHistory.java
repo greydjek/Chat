@@ -28,16 +28,14 @@ public class greatHistory {
     }
 
     public String reedHistoryUser() {
-        String s;
+        String s = " History is null " ;
         try (var boofer = new BufferedReader(new FileReader("ChatClient/src/main/java/NetWork/HistoryServise/History.txt"))) {
-            while ((s = boofer.readLine()) != null) {
-boofer.lines();
+            while (!boofer.readLine().isEmpty()) {
+              return boofer.readLine();
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-return s;
+  return s;
     }
 }
