@@ -1,41 +1,51 @@
 package NetWork.HistoryServise;
 
+import lesson3java2.MainChatController;
+import Error.ErrorClient;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class greatHistory {
     static final String RESEX = "%!%";
+    MainChatController mainChatController;
 
     public static void main(String... args) throws IOException {
-//        greatFileHistory();
-    }//C:\Users\Artem\Chat\ChatClient\src\main\java\NetWork\HistoryServise\greatHistory.java
 
-    public void greatFileHistory() throws IOException {
+    }
+    public void greatFileHistory() throws ErrorClient, IOException {
         File history = new File("ChatClient/src/main/java/NetWork/HistoryServise/History.txt");
         if (!history.exists()) {
-            history.createNewFile();
+                   history.createNewFile();
+             {
+                 throw new ErrorClient("не возможно создать файл истории по указанному пути");
+            }
         }
     }
 
-    public void reedAndWriteInTxtFile(String user, String message) throws IOException {
+    public void readAndWriteInTxtFile(String user, String message) throws IOException {
         greatFileHistory();
-//        try (var bufread= new BufferedReader(new FileReader("ChatClient/src/main/java/NetWork/HistoryServise/History.txt"))){
-//            if (bufread.readLine().endsWith(RESEX)){
         try (var fileWriter = new FileWriter("ChatClient/src/main/java/NetWork/HistoryServise/History.txt", true)) {
             fileWriter.write(user + " " + message);
-//                }
-//            }
+
         }
     }
 
-    public String reedHistoryUser() {
-        String s = " History is null " ;
+    public ArrayList readHistoryUser() throws IOException {
+        ArrayList<String> listHistory = new ArrayList<>();
+        String s;
         try (var boofer = new BufferedReader(new FileReader("ChatClient/src/main/java/NetWork/HistoryServise/History.txt"))) {
-            while (!boofer.readLine().isEmpty()) {
-              return boofer.readLine();
+            while ( (s= boofer.readLine())!=null) {
+//             s =  boofer.readLine();
+//            listHistory.add(s);
+        Scanner in = new Scanner(boofer);
+        while (in.hasNextLine()){
+            listHistory.add(in.nextLine());
+                }
             }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
-  return s;
+       return listHistory;
     }
+
 }
