@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.geometry.Insets?>
+<!--</AnchorPane>-->
+
 <AnchorPane prefHeight="489.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson3java2.MainChatController">
    <VBox fx:id="loginpanel" layoutX="294.0" layoutY="62.0" prefHeight="126.0" prefWidth="179.0" visible="true">
        <Label text="Login" />
@@ -44,11 +46,9 @@
     </VBox>
         <HBox fx:id="mainBox" layoutX="-4.0" layoutY="26.0" prefHeight="463.0" prefWidth="925.0" visible="false">
         <VBox prefHeight="503.0" prefWidth="673.0">
-          <TextArea fx:id="privateMessage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0"
-                    prefWidth="664.0" text="Private Message  " HBox.hgrow="ALWAYS" />
+          <TextArea fx:id="privateMessage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="664.0" text="Private Message  " HBox.hgrow="ALWAYS" />
 
-      <TextArea fx:id="MainControls" editable="false" maxHeight="-Infinity"
-                maxWidth="-Infinity" prefHeight="284.0" prefWidth="664.0" text="Public message  ">
+      <TextArea fx:id="MainControls" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="284.0" prefWidth="664.0" text="Public message  ">
 <!--<VBox.margin>-->
 <!--   <Insets left="20" right="5" />-->
 <!--</VBox.margin>-->
@@ -82,13 +82,10 @@
         <Button fx:id="addNewUser" onAction="#addnew" prefHeight="100" prefWidth="100" text="ADD" />
         <Button fx:id="cancel" onAction="#toMainMenu" prefHeight="100" prefWidth="100" text="CANCEL" />
     </VBox>
-    <VBox fx:id="HistoryVBox" visible="false" layoutX="20.0"  maxWidth="-Infinity" maxHeight="-Infinity" >
+    <VBox fx:id="HistoryVBox" layoutX="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="482.0" prefWidth="898.0" visible="false">
 
-        <TextArea fx:id="HistoryTextAreaField" editable="false" maxWidth="-Infinity" maxHeight="-Infinity">
+        <TextArea fx:id="HistoryTextAreaField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="462.0" prefWidth="892.0">
     </TextArea>
-    <Button fx:id="cancelHistory" onAction="#cancel"  prefHeight="50" prefWidth="100" text="CANCEL" />
+    <Button fx:id="cancelHistory" onAction="#cancel" prefHeight="50" prefWidth="100" text="CANCEL" />
     </VBox>
 </AnchorPane>
-
-
-<!--</AnchorPane>-->
