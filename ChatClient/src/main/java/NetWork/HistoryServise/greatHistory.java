@@ -47,5 +47,14 @@ public class greatHistory {
         }
        return listHistory;
     }
+    public ArrayList read100HistoryLines() throws IOException {
+        int b = readHistoryUser().size();
+        ArrayList<String> abort100History = new ArrayList<>();
+        for(int index=0;index<100;index++, b-- ){
+            String s = readHistoryUser().get(b-1).toString();
+            abort100History.add(s);
+        }
+        return abort100History;
+    }
 
 }

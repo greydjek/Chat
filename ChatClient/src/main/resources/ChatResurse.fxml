@@ -82,9 +82,9 @@
         <Button fx:id="addNewUser" onAction="#addnew" prefHeight="100" prefWidth="100" text="ADD" />
         <Button fx:id="cancel" onAction="#toMainMenu" prefHeight="100" prefWidth="100" text="CANCEL" />
     </VBox>
-    <VBox fx:id="HistoryVBox" visible="false" layoutX="20.0" maxHeight="227.0" maxWidth="586.0" prefHeight="176.0" prefWidth="586.0">
+    <VBox fx:id="HistoryVBox" visible="false" layoutX="20.0"  maxWidth="-Infinity" maxHeight="-Infinity" >
 
-        <TextArea fx:id="HistoryTextAreaField" editable="false" maxWidth="Infinity" maxHeight="Infinity">
+        <TextArea fx:id="HistoryTextAreaField" editable="false" maxWidth="-Infinity" maxHeight="-Infinity">
     </TextArea>
     <Button fx:id="cancelHistory" onAction="#cancel"  prefHeight="50" prefWidth="100" text="CANCEL" />
     </VBox>
