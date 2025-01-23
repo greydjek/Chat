@@ -1,6 +1,6 @@
 package NetWork.HistoryServise;
 
-import lesson3java2.MainChatController;
+import controllers.MainChatController;
 import Error.ErrorClient;
 import java.io.*;
 import java.util.ArrayList;
@@ -37,8 +37,6 @@ public class greatHistory {
         String s;
         try (var boofer = new BufferedReader(new FileReader("ChatClient/src/main/java/NetWork/HistoryServise/History.txt"))) {
             while ( (s= boofer.readLine())!=null) {
-//             s =  boofer.readLine();
-//            listHistory.add(s);
         Scanner in = new Scanner(boofer);
         while (in.hasNextLine()){
             listHistory.add(in.nextLine());

@@ -3,6 +3,7 @@ module ChatClient {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.desktop;
-    opens lesson3java2;
+    opens app;
     opens NetWork;
+    opens controllers;
 }
