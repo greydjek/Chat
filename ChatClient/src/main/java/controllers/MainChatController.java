@@ -116,9 +116,7 @@ public class MainChatController implements Initializable, MessageProcessor {
     }
 
     private void joinParsingMessage(String message) throws IOException {
-//    System.out.println(" -input Message in MCC-");
         var splitMessage = message.split(RESEX);
-//    MainControls.appendText(splitMessage[0]);
         switch (splitMessage[0]) {
             case "/Auto_ok":
                 this.nick = splitMessage[0];
@@ -128,7 +126,6 @@ public class MainChatController implements Initializable, MessageProcessor {
                 mainBox.setVisible(true);
                 break;
             case "/broadcast":
-                //  System.out.println("MainChat controller send message");
                 MainControls.appendText(splitMessage[1] + " : " + splitMessage[2]);
                 this.greatHistory = new greatHistory();
                 greatHistory.readAndWriteInTxtFile(splitMessage[1], splitMessage[2]);
