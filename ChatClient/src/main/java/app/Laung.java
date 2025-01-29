@@ -1,4 +1,4 @@
-package lesson3java2;
+package app;
 
 public class Laung {
     public static void main(String[] args){

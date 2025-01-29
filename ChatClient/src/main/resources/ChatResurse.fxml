@@ -3,9 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!--</AnchorPane>-->
 
-<AnchorPane prefHeight="489.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lesson3java2.MainChatController">
+<AnchorPane prefHeight="489.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainChatController">
    <VBox fx:id="loginpanel" layoutX="294.0" layoutY="62.0" prefHeight="126.0" prefWidth="179.0" visible="true">
        <Label text="Login" />
        <TextField fx:id="loginField" />
@@ -49,9 +48,7 @@
           <TextArea fx:id="privateMessage" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="280.0" prefWidth="664.0" text="Private Message  " HBox.hgrow="ALWAYS" />
 
       <TextArea fx:id="MainControls" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="284.0" prefWidth="664.0" text="Public message  ">
-<!--<VBox.margin>-->
-<!--   <Insets left="20" right="5" />-->
-<!--</VBox.margin>-->
+
 </TextArea>
           <VBox prefHeight="160.0" prefWidth="125.0">
             <TextField fx:id="InputField" onAction="#SendMessage" prefHeight="55.0" prefWidth="664.0" />
@@ -60,14 +57,10 @@
 
           </VBox>
         </VBox>
-<!--        VBox.vgrow="ALWAYS"-->
-<!--        prefHeight="400.0" prefWidth="296.0"-->
         <HBox maxHeight="500" />
       <HBox prefHeight="463.0" prefWidth="8.0" />
   <ListView fx:id="ContactList" layoutX="681.0" layoutY="13.0" minWidth="100" prefHeight="463.0" prefWidth="266.0" />
-<!--      <VBox.margin>-->
-<!--         <Insets left="20" right="5" />-->
-<!--      </VBox.margin>-->
+
         </HBox>
     <VBox fx:id="addNewUs" layoutX="20.0" maxHeight="227.0" maxWidth="586.0" prefHeight="176.0" prefWidth="586.0" visible="false">
 <Label text="Login" />
